@@ -1,0 +1,6 @@
+#to see inf about user add ur name followed by id
+id humna 
+#to see list of user currently logged in to system
+who
+#to display record of all logged in users
+last
