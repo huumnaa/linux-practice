@@ -1,0 +1,14 @@
+# 4 Ways to Log into a Linux System
+
+1. Local Text Mode Console  
+# Direct login using system's keyboard and screen (no GUI)
+
+2. Local Graphical Console  
+# Login using the system’s graphical interface (GUI)
+
+3. Remote Text Mode Console (SSH)  
+# Login remotely via terminal  
+# Command: ssh username@ip_address
+
+4. Remote Graphical Console  
+# Access remote GUI using VNC, RDP, or X11 forwarding
