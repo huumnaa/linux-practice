@@ -1,0 +1,46 @@
+# 📘 Linux System Documentation: Getting Help and Using Manual Pages
+
+## 🔹 1. Using --help with Commands
+# If you forget the options for a command, most Linux commands support the `--help` option.
+
+ls --help
+
+## 🔹 2. Manual Pages (man)
+# To access detailed manual pages for commands, use `man` followed by the command name:
+
+man journalctl
+
+# ⚠️ Some commands might have multiple manual sections (e.g., functions vs commands).
+
+## 🔹 3. apropos - Search Commands by Keyword
+# If you can't remember the command name, use `apropos` to search based on keywords.
+
+apropos director
+
+# If it doesn't work the first time, it may be because the manual page database isn't updated:
+sudo mandb
+
+# You can limit the search to specific manual sections using the -s option:
+apropos -s 1,3 director
+
+## 🔹 4. Tab Autocompletion
+# Tab helps autocomplete commands and filenames. This increases speed and reduces errors.
+
+# Example:
+# Type part of a command, like:
+systemc [then press TAB]
+# It will auto-complete to:
+systemctl
+
+# Pressing TAB twice will show available options or suggestions.
+
+## 🔹 5. Using info Pages
+# Some commands also have `info` pages with detailed structured documentation.
+
+info bash
+
+## 🔹 6. Additional Documentation
+# Some software also provides extra docs in:
+# /usr/share/doc
+
+# browse this directory for package-specific documentation.
