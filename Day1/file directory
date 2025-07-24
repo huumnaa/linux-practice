@@ -1,0 +1,63 @@
+# Essential Linux Commands (All-in-One Notes)
+
+# To see info about a user
+id humna
+
+# To see list of users currently logged in
+who
+
+# To display login history of all users
+last
+
+# To list files and directories
+ls
+
+# To list all files including hidden ones
+ls -a
+
+# Long listing with details
+ls -al
+
+# Show sizes in human-readable format
+ls -lh
+
+# To see current working directory
+pwd
+
+# To change directory (two ways: absolute and relative)
+cd /path/to/dir     # Absolute path
+cd dir_name         # Relative path
+
+# Go up one directory (parent directory)
+cd ..
+
+# Go to root directory
+cd /
+
+# Go to previous directory
+cd -
+
+# Go to home directory
+cd
+
+# To create a new file
+touch humna
+
+# To create a new directory
+mkdir new_dir
+
+# To copy a file
+cp /path/source_file /path/destination/
+
+# To copy a directory with all its contents
+cp -r /path/source_dir /path/destination/
+
+# To move a file or directory (or rename)
+mv /path/source /path/destination/
+
+# To delete a file
+rm file_name
+
+# To delete a directory
+rm -r dir_name
+
