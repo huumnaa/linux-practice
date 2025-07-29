@@ -1,0 +1,50 @@
+## 🛡️ File Permissions in Linux — UGO & RWX
+
+In Linux, each file and directory has permissions for:
+- **u** → user (owner)
+- **g** → group
+- **o** → others
+
+Each can have:
+- **r** → read 4
+- **w** → write 2
+- **x** → execute 1
+
+---
+
+### 📄 1. List Permissions (Check Them)
+
+```bash
+ls -l file.txt
+
+
+# 1. Change permissions
+chmod u+x script.sh       # Add execute for user
+chmod 644 notes.txt       # rw-r--r--
+
+# 2. Change owner (user)
+chown [new_owner] [filename]
+chown humna notes.txt     # Now i owns the file
+
+# 3. Change owner AND group
+chown humna:admins file.txt
+
+# 4. Change group only
+chgrp [new_group] [file]
+chgrp admins file.txt
+
+
+
+-rwxr-xr--
+ |  | |  |
+ |  | |  └── Others
+ |  | └────── Group
+ |  └──────── Owner
+└──────────── File type (- = file, d = directory)
+
+touch file.txt
+chmod 600 file.txt && ls -l
+chmod 644 file.txt && ls -l
+chmod 777 file.txt && ls -l
+chmod 000 file.txt && ls -l
+
