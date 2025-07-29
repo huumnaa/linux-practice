@@ -1,0 +1,62 @@
+# 🔐 Linux Special Permissions — SUID, SGID, Sticky Bit
+
+
+---
+
+## 🚀 What They Are
+
+👉 **SUID (Set User ID)**  
+- Only for files  
+- Runs with the file **owner's power**  
+- Example: `passwd` runs as root  
+- Set using: `chmod u+s file`  
+- Number = 4
+
+👉 **SGID (Set Group ID)**  
+- On files: runs with the file's **group**  
+- On folders: new files get the **folder’s group**  
+- Set using: `chmod g+s file_or_dir`  
+- Number = 2
+
+👉 **Sticky Bit**  
+- Only for **folders**  
+- Anyone can create files, but only the **file owner** can delete their own  
+- Used in `/tmp`  
+- Set using: `chmod +t folder`  
+- Number = 1
+
+---
+
+## 🧠 Easy Numbers to Remember
+
+| What You Want         | Command        |
+|-----------------------|----------------|
+| SUID only             | `chmod 4755 file`     |
+| SGID only             | `chmod 2755 file`     |
+| Sticky only           | `chmod 1755 folder`   |
+| SGID + Sticky         | `chmod 3755 folder`   |
+| All 3 (SUID+SGID+Sticky) | `chmod 7755 file`   |
+
+**Tip:**  
+- First number = special permissions  
+- Next three = normal rwx for user/group/others
+
+---
+
+## 👀 What You’ll See in `ls -l`
+
+| Symbol         | Means                   |
+|----------------|-------------------------|
+| `s`            | special bit + execute ✅ |
+| `S`            | special bit only ❌ (no execute) |
+| `t`            | sticky + execute ✅      |
+| `T`            | sticky only ❌ (no execute) |
+
+---
+
+- `u+s` = SUID  
+- `g+s` = SGID  
+- `+t` = Sticky  
+And use numbers 4 (SUID), 2 (SGID), 1 (Sticky) to combine them.
+
+Happy chmod-ing>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
