@@ -1,0 +1,22 @@
+#to see intresting things like inode of file or dir
+stat humna
+
+##  Hard Link vs Soft Link
+In Linux, we can create two types of links to a file:
+
+### Hard Link
+- Points to the **same inode** (actual file data on disk)
+- Even if the original file is deleted, the hard link still works
+- Cannot be created for directories
+- Only works within the **same filesystem**
+ln /path/to/original /path/to/hardlink
+
+###  Soft Link (Symbolic Link)
+- Points to the **file name/path**, like a shortcut
+- If the original file is deleted, the soft link breaks
+- Can link to both files and directories
+- Works across **different filesystems**
+ln -s /path/to/original /path/to/symlink
+
+# View inode numbers and structure
+ls -li
